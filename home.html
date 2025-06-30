@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma Sakura Anime - Início</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Cherry+Bomb+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="sakura"></div>
+
+    <nav>
+        <h1>🌸 Japones Online 🌸</h1>
+        <div>
+            <button onclick="showPopup('login-popup')">Login</button>
+            <button onclick="showPopup('register-popup')">Registrar</button>
+        </div>
+    </nav>
+
+    <div id="login-popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup('login-popup')">×</span>
+            <h2>Login</h2>
+            <form onsubmit="handleLogin(event)">
+                <input type="text" placeholder="Usuário" required>
+                <input type="password" placeholder="Senha" required>
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="register-popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup('register-popup')">×</span>
+            <h2>Registrar</h2>
+            <form onsubmit="handleRegister(event)">
+                <input type="text" placeholder="Usuário" required>
+                <input type="email" placeholder="E-mail" required>
+                <input type="password" placeholder="Senha" required>
+                <button type="submit">Registrar</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="home-container">
+        <h2>Bem-vindo à Plataforma Japones Online</h2>
+        <p>Acompanhe minha jornada de estudos nesse idioma incrivel!</p>
+        <a href="index.html" class="start-button">Acessar Módulos</a>
+        <div class="progress-container">
+            <h3>Seu Progresso</h3>
+            <div class="progress-bar">
+                <div id="progress" class="progress-fill"></div>
+            </div>
+            <p id="progress-text">0% Concluído</p>
+        </div>
+    </div>
+
+    <script src="home.js"></script>
+</body>
+</html>

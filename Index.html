@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma Sakura Anime</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Cherry+Bomb+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="sakura"></div>
+
+    <nav>
+        <h1>🌸 Japones Online 🌸</h1>
+        <div>
+            <button onclick="showPopup('login-popup')">Login</button>
+            <button onclick="showPopup('register-popup')">Registrar</button>
+        </div>
+    </nav>
+
+    <div id="login-popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup('login-popup')">×</span>
+            <h2>Login</h2>
+            <form onsubmit="handleLogin(event)">
+                <input type="text" placeholder="Usuário" required>
+                <input type="password" placeholder="Senha" required>
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="register-popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup('register-popup')">×</span>
+            <h2>Registrar</h2>
+            <form onsubmit="handleRegister(event)">
+                <input type="text" placeholder="Usuário" required>
+                <input type="email" placeholder="E-mail" required>
+                <input type="password" placeholder="Senha" required>
+                <button type="submit">Registrar</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h2>Módulos</h2>
+            <ul id="modules-list">
+                <li>
+                    <h3 onclick="showModule(1)">Módulo 1: Iniciante Absoluto (Zero a N5 Básico)</h3>
+                    <ul id="points-1" class="points hidden"></ul>
+                </li>
+                <li>
+                    <h3 onclick="showModule(2)">Módulo 2: Iniciante (N5)</h3>
+                    <ul id="points-2" class="points hidden"></ul>
+                </li>
+                <li>
+                    <h3 onclick="showModule(3)">Módulo 3: Iniciante Avançado (N5-N4)</h3>
+                    <ul id="points-3" class="points hidden"></ul>
+                </li>
+                <li>
+                    <h3 onclick="showModule(4)">Módulo 4: Intermediário Inicial (N4)</h3>
+                    <ul id="points-4" class="points hidden"></ul>
+                </li>
+                <li>
+                    <h3 onclick="showModule(5)">Módulo 5: Intermediário (N4-N3)</h3>
+                    <ul id="points-5" class="points hidden"></ul>
+                </li>
+                <li>
+                    <h3 onclick="showModule(6)">Módulo 6: Intermediário Avançado (N3)</h3>
+                    <ul id="points-6" class="points hidden"></ul>
+                </li>
+                <li>
+                    <h3 onclick="showModule(7)">Módulo 7: Avançado Inicial (N2)</h3>
+                    <ul id="points-7" class="points hidden"></ul>
+                </li>
+                <li>
+                    <h3 onclick="showModule(8)">Módulo 8: Avançado (N2-N1)</h3>
+                    <ul id="points-8" class="points hidden"></ul>
+                </li>
+                <li>
+                    <h3 onclick="showModule(9)">Módulo 9: Kanji</h3>
+                    <ul id="points-9" class="points hidden"></ul>
+                </li>
+                <li>
+                    <h3 onclick="showModule(10)">Módulo 10: Gramatica</h3>
+                    <ul id="points-10" class="points hidden"></ul>
+                </li>
+            </ul>
+        </aside>
+
+        <main class="content">
+            <div id="module-content" class="module-content"></div>
+        </main>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
